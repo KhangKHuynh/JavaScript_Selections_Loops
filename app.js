@@ -2,7 +2,7 @@ console.log("Hello World!\n==========\n");
 
 // Exercise 1 Section
 console.log("EXERCISE 1:\n==========\n");
-for (let i = 0; i < 100; i++) {
+for (let i = 1; i <= 100; i++) {
     if (i % 2 == 0) {
         continue;
     } else {
@@ -35,8 +35,12 @@ if(i % 3 == 0) {
 if (i % 5 == 0) {
     output += "BUZZ";
 }
-console.log(`${i} ${output}`);
+if (i % 2 !== 0) {
+    console.log(`${i} ${output}`);
+} 
+
 i++;
+
 }
 
 let x = 1;
@@ -51,20 +55,24 @@ do {
     if (x % 5 ==0) {
         output += "BUZZ";
     }
-
-    console.log(`${x} ${output}`);
-
+    if (x % 2 !== 0) {
+        console.log(`${x} ${output}`);
+    } 
     x++;
+
 } while (x <= 100);
 // Exercise 4 section
 let value = Math.round((Math.random() * 500)); // creates a random number between 0 and 500
 let n = Math.round(Math.random() * (500 - 100) + 100); // creates a random number between 100 and 500
 
-for (let i = 1; i = n; i++){
+for (let i = 1; i <= n; i++){
     if (i == value) {
         console.log(`Found ${value}!`);
         break;
     }
 }
 
-console.log(`Did not find ${value}`);
+if (!found) {
+    console.log(`Did not find ${value}`);
+}
+
