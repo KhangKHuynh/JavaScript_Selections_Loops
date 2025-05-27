@@ -68,6 +68,7 @@ let found = false;
 for (let i = 1; i <= n; i++){
     if (i == value) {
         console.log(`Found ${value}!`);
+        found = true;
         break;
     }
 }
